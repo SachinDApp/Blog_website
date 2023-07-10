@@ -1,0 +1,12 @@
+<%- include("./partials/header") %>
+
+<h1>Hello</h1>
+<p><%= blog %></p>
+<% blogs.forEach(function(blog){ %>
+<%   let alfa=blog.content.slice(0,300)+"...."; %>  
+<%   let link=blog.title.replace(/\s+/g, '-');  %>
+<%     link="/posts/"+link; %>
+    <h1><%= blog.title %> </h1>
+    <p><%= alfa %> <a href=<%=link %>>click here</a></p>
+ <% }) %>
+<%-include("./partials/footer") %>
